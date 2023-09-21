@@ -14,6 +14,8 @@ deno run --allow-net https://raw.githubusercontent.com/HoverBaum/kellerkinder/ma
 
 Alle Utils brauchen `--allow-net`, um Anfragen an die API zu senden.
 
+Beim ersten Ausführen eines Utils wird Deno unsere Libs runter laden. Diese sollten danach gecashed sein.
+
 ### Mögliche Spenden
 
 Als Ausgabe erhaltet ihr dann eine Liste von Chatbefehlen für alles, was ihr momentan einem Mod spenden könntet. Falls ihr ein Items mehreren Mods spenden könnt, werden alle aufgelistet. Das sieht dann etwas so aus:
