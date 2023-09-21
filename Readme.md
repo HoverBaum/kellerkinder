@@ -9,7 +9,7 @@ Wer will schon manuell Chatbefehle bauen, wenn das ganze auch automatisiert geht
 Da Deno Skripte direkt von GitHub ausführen kann, reich ein einfaches:
 
 ```shell
-deno run --allow-net https://raw.githubusercontent.com/HoverBaum/kellerkinder/master/cli-utils/donations.ts
+deno run --allow-net https://raw.githubusercontent.com/HoverBaum/kellerkinder/main/cli-utils/donations.ts
 ```
 
 Alle Utils brauchen `--allow-net`, um Anfragen an die API zu senden.
@@ -19,7 +19,7 @@ Alle Utils brauchen `--allow-net`, um Anfragen an die API zu senden.
 Als Ausgabe erhaltet ihr dann eine Liste von Chatbefehlen für alles, was ihr momentan einem Mod spenden könntet. Falls ihr ein Items mehreren Mods spenden könnt, werden alle aufgelistet. Das sieht dann etwas so aus:
 
 ````
-deno run --allow-net https://raw.githubusercontent.com/HoverBaum/kellerkinder/master/cli-utils/donations.ts [username]
+deno run --allow-net https://raw.githubusercontent.com/HoverBaum/kellerkinder/main/cli-utils/donations.ts [username]
 ```
 
 Denkt daran, euren username zu nutzen 😉
@@ -37,7 +37,7 @@ Denk daran: Mods müssen für Spenden im Chat sein 🙃
 ### Mod Fortschritt
 
 ```shell
-deno run --allow-net https://raw.githubusercontent.com/HoverBaum/kellerkinder/master/cli-utils/completion.ts
+deno run --allow-net https://raw.githubusercontent.com/HoverBaum/kellerkinder/main/cli-utils/completion.ts
 ```
 
 ```

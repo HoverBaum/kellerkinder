@@ -22,7 +22,7 @@ const username = Deno.args[0]
 if (!username) {
   console.error(`Bitte gib deinen Nutzernamen an.
 Beispiel:
-deno run --allow-net https://raw.githubusercontent.com/HoverBaum/kellerkinder/master/cli-utils/donations.ts hoverbaum`)
+deno run --allow-net https://raw.githubusercontent.com/HoverBaum/kellerkinder/main/cli-utils/donations.ts hoverbaum`)
   Deno.exit()
 } else {
   console.log(`Hi ${username} 👋
