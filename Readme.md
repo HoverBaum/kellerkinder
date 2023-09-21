@@ -18,7 +18,7 @@ Alle Utils brauchen `--allow-net`, um Anfragen an die API zu senden.
 
 Als Ausgabe erhaltet ihr dann eine Liste von Chatbefehlen für alles, was ihr momentan einem Mod spenden könntet. Falls ihr ein Items mehreren Mods spenden könnt, werden alle aufgelistet. Das sieht dann etwas so aus:
 
-````
+```
 deno run --allow-net https://raw.githubusercontent.com/HoverBaum/kellerkinder/main/cli-utils/donations.ts [username]
 ```
 
