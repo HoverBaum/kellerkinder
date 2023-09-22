@@ -77,7 +77,7 @@ const parseAPIModState = (modState: APIMOdState): ModState => {
       { totalCount: 0, currentCount: 0 }
     )
   const completionRate =
-    Math.round((totalCounts.currentCount / totalCounts.totalCount) * 1000) / 10
+    Math.floor((totalCounts.currentCount / totalCounts.totalCount) * 1000) / 10
 
   return {
     name: infos.name as ModName,
