@@ -1,6 +1,6 @@
 # Kellerkinder utils
 
-Ein kleines, [Deno](https://deno.com/) basiertes Util für das Kellerkinder Chatspiel.
+Ein kleines, [Deno](https://deno.com/) basiertes Util für das [Kellerkinder Chatspiel](https://kellerkinder.xicanmeow.de/) von [xicanmeow](https://www.twitch.tv/xicanmeow).
 
 Wer will schon manuell Chatbefehle bauen, wenn das ganze auch automatisiert geht 😁
 
