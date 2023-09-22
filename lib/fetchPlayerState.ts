@@ -31,6 +31,7 @@ const parsePlayerState = (apiPlayerState: APIPlayerState): PlayerState => {
     apiPlayerState
   return {
     name: infos.username,
+    lastSearchTimestamp: infos.lastSuchenTimestamp,
     items: inventoryGegenstaende
       .map((item) => ({
         name: item.gegenstandName,

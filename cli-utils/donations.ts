@@ -16,18 +16,10 @@
 
 import { fetchGameState } from '../lib/fetchGameState.ts'
 import { findPossibleDonations } from '../lib/findPossibleDonations.ts'
+import { requireUsername } from './utils/requireUsername.ts'
 
-// Get username from cli and exit, if not provided.
-const username = Deno.args[0]
-if (!username) {
-  console.error(`Bitte gib deinen Nutzernamen an.
-Beispiel:
-deno run --allow-net https://raw.githubusercontent.com/HoverBaum/kellerkinder/main/cli-utils/donations.ts hoverbaum`)
-  Deno.exit()
-} else {
-  console.log(`Hi ${username} 👋
-Wir laden den aktuellen Stand...`)
-}
+const username = requireUsername()
+console.log('Wir laden den aktuellen Stand...')
 
 let gameState
 try {

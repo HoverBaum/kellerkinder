@@ -37,6 +37,7 @@ export type PlayerDonation = {
 
 export type PlayerState = {
   name: string
+  lastSearchTimestamp: string | null
   items: PlayerItem[]
   food: PlayerItem[]
   donations: PlayerDonation[]
