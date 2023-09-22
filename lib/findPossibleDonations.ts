@@ -7,8 +7,8 @@ export const findPossibleDonations = (gameState: GameState): string[] => {
   const { mods, player } = gameState
   const { items } = player
   const possibleDonations: string[] = []
-  for (const item of items) {
-    for (const modName in mods) {
+  for (const modName in mods) {
+    for (const item of items) {
       const mod = mods[modName as ModName]
       const modItem = mod.items.find((modItem) => modItem.name === item.name)
       if (modItem && modItem.currentCount < modItem.requiredCount) {
