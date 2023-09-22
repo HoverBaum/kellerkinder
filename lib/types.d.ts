@@ -15,6 +15,11 @@ export type ModName =
   | 'MsSummersun'
   | 'Tbi994'
 
+export type Donation = {
+  target: ModName | 'Timer'
+  item: string
+  amount: number
+}
 export type ModStateMap = {
   [key in ModName]: ModState
 }

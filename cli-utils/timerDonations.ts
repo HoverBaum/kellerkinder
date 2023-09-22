@@ -1,24 +1,8 @@
-/**
- * Util for donations a player can currently do.
- *
- * ## Usage:
- * deno run --allow-net cli-utils/donations.ts [username]
- *
- * ## Example output:
- * Hi hoverbaum 👋
- * Wir laden den aktuellen Stand...
- *
- * Mögliche Spenden:
- * !spenden Lasagne 1 @Cebrox
- *
- * Denk daran: Mods müssen für Spenden im Chat sein 🙃
- */
-
 import { fetchGameState } from '../lib/fetchGameState.ts'
 import {
   donationToBotCommand,
   findPossibleDonations,
-  onlyModDonations,
+  onlyTimerDonations,
   totalDonationsCount,
 } from '../lib/findPossibleDonations.ts'
 import { requireUsername } from './utils/requireUsername.ts'
@@ -35,10 +19,10 @@ try {
 }
 
 const possibleDonations =
-  findPossibleDonations(gameState).filter(onlyModDonations)
+  findPossibleDonations(gameState).filter(onlyTimerDonations)
 
 console.log('')
-console.log('Mögliche Spenden an Mods:')
+console.log('Mögliche Spenden an den Timer:')
 if (possibleDonations.length === 0) {
   console.log('Keine 😔')
   Deno.exit()
@@ -52,4 +36,3 @@ const totalDonations = totalDonationsCount(possibleDonations)
 
 console.log('')
 console.log(`Insgesamt kannst du ${totalDonations} Gegenstände spenden.`)
-console.log('Denk daran: Mods müssen für Spenden im Chat sein 🙃')
