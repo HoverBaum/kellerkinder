@@ -20,14 +20,14 @@ Beim ersten Ausführen eines Utils wird Deno unsere Libs runter laden. Diese sol
 
 Als Ausgabe erhaltet ihr dann eine Liste von Chatbefehlen für alles, was ihr momentan einem Mod spenden könntet. Falls ihr ein Items mehreren Mods spenden könnt, werden alle aufgelistet. Das sieht dann etwas so aus:
 
-```
-deno run --allow-net https://raw.githubusercontent.com/HoverBaum/kellerkinder/main/cli-utils/donations.ts [username]
+```shell
+deno run --allow-net https://raw.githubusercontent.com/HoverBaum/kellerkinder/main/cli-utils/donations.ts username
 ```
 
 Denkt daran, euren username zu nutzen 😉
 
 ```
-Hi hoverbaum 👋
+Hi Kellerkind 👋
 Wir laden den aktuellen Stand...
 
 Mögliche Spenden:
@@ -55,9 +55,22 @@ MsSummersun     🔒 65.8%
 Tbi994          🔑 100%
 ```
 
+### Zeit bis du suchen kannst
+
+```shell
+deno run --allow-net https://raw.githubusercontent.com/HoverBaum/kellerkinder/main/cli-utils/nextSearch.ts username
+```
+
+```
+Hi Kellerkind 👋
+Du musst noch warte 🐌
+Noch: 14:20 Minuten
+```
+
 ## Limitierungen
 
 - Wir können leider nicht abfragen, welcher Mod gerade im Chat ist. Dafür bräuchten wir einen Moderator Token. Siehe [GetChatter Doku](https://dev.twitch.tv/docs/api/reference/#get-chatters)
+- Fehler werden nur bedingt abgefangen. Wenn etwas einmal nicht funktioniert, probiere es einfach nochmal und überprüfe deine Eingaben.
 
 ## Dev Docs
 
