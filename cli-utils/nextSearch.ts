@@ -15,10 +15,8 @@ const now = new Date()
 
 const timeSinceLastSearch = now.getTime() - lastSearch.getTime()
 
-console.log(timeSinceLastSearch)
 // Useres can search every 30 Minutes.
 const timeUntilNextSearch = 30 * 60 * 1000 - timeSinceLastSearch
-console.log(timeUntilNextSearch)
 
 if (timeUntilNextSearch <= 0) {
   console.log('Du kannst wieder suchen 🐶')
