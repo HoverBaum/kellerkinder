@@ -29,7 +29,13 @@ deno run --allow-net https://raw.githubusercontent.com/HoverBaum/kellerkinder/ma
 Wir laden den aktuellen Stand...`)
 }
 
-const gameState = await fetchGameState(username)
+let gameState
+try {
+  gameState = await fetchGameState(username)
+} catch (e) {
+  console.error('🚨 ' + e.message)
+  Deno.exit()
+}
 
 const possibleDonations = findPossibleDonations(gameState)
 

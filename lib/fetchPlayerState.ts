@@ -6,9 +6,12 @@ import { APIPlayerState, PlayerState } from './types.d.ts'
 export const fetchPlayerState = async (
   playerName: string
 ): Promise<PlayerState> => {
-  const apiState = await fetch(
+  const apiResponse = await fetch(
     `https://api.xicanmeow.de/api/game/basementdweller/info/user/${playerName}`
-  ).then((res) => res.json())
+  )
+  if (!apiResponse.ok)
+    throw new Error(`Nutzername "${playerName}" wurde nicht gefunden 😔`)
+  const apiState = await apiResponse.json()
   const playerState = parsePlayerState(apiState as APIPlayerState)
   return playerState
 }
