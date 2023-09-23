@@ -80,3 +80,13 @@ We program in English 🏴󠁧󠁢󠁥󠁮󠁧󠁿
 
 - lib, single functions that we can compose into utils.
 - cli-utils, single utils that can be called with "deno run".
+
+### Using the lob
+
+To use this in your own project we recommend using the exported members of lib/mod.ts.
+
+```typescript
+import {fetchGameState} from 'https://esm.sh/gh/HoverBaum/kellerkinder/lib/mod.ts'
+```
+
+Make sure to use a version or commit specifier to avoid sudden changes.
