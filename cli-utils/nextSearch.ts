@@ -1,4 +1,5 @@
 import { fetchPlayerState } from '../lib/fetchPlayerState.ts'
+import { nextSearchTimestamp } from '../lib/searchTimes.ts'
 import { requireUsername } from './utils/requireUsername.ts'
 
 const username = requireUsername()
@@ -10,13 +11,11 @@ if (playerState.lastSearchTimestamp === null) {
   Deno.exit()
 }
 
-const lastSearch = new Date(playerState.lastSearchTimestamp)
+const nextSearch = nextSearchTimestamp(playerState.lastSearchTimestamp)
 const now = new Date()
 
-const timeSinceLastSearch = now.getTime() - lastSearch.getTime()
-
 // Useres can search every 30 Minutes.
-const timeUntilNextSearch = 30 * 60 * 1000 - timeSinceLastSearch
+const timeUntilNextSearch = nextSearch - now.getTime()
 
 if (timeUntilNextSearch <= 0) {
   console.log('Du kannst wieder suchen 🐶')
