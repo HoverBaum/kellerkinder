@@ -6,7 +6,7 @@ Wer will schon manuell Chatbefehle bauen, wenn das ganze auch automatisiert geht
 
 ## Nutzung
 
-Da Deno Skripte direkt von GitHub ausführen kann, reich ein einfaches:
+Da Deno Skripte direkt von GitHub ausführen kann, reicht ein einfaches:
 
 ```shell
 deno run --allow-net https://raw.githubusercontent.com/HoverBaum/kellerkinder/main/cli-utils/donations.ts
@@ -81,7 +81,7 @@ We program in English 🏴󠁧󠁢󠁥󠁮󠁧󠁿
 - lib, single functions that we can compose into utils.
 - cli-utils, single utils that can be called with "deno run".
 
-### Using the lob
+### Using the lib
 
 To use this in your own project we recommend using the exported members of lib/mod.ts.
 
